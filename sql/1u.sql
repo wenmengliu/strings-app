@@ -13,7 +13,7 @@ create table if not exists public.users (
 create table if not exists public.posts(
     id bigserial primary key,
     user_id bigint  references public.users(id),
-    conotent text,
+    content text,
     created_at timestamp default now(),
     updated_at timestamp default now()
 );
